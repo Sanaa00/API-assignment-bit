@@ -1,0 +1,97 @@
+
+@font-face {
+    font-family: NotoSans;
+    src: url(./font/NotoSans-SemiBold.ttf);
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: NotoSans;
+}
+
+/* 20262E rang*/
+.menu {
+
+    display: none;
+}
+.nav-img {
+    height: 45px;
+    width: auto;
+}
+.nav {
+    background-color: #913175;
+    height: 60px;
+    color: #E9E8E8;
+    font-size: 18px;
+    position: fixed;
+    width: 100vw;}
+
+.div-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+nav ul a {
+    margin: 0px 20px;
+    align-items: center;
+    display: flex;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 40px;
+    margin: 0 auto;
+
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.card{
+background-color: #91317595;
+    /* background-color: red; */
+    /* background-color: linear-gradient(#913175, #b26f9e); */
+    border-radius: 10px;
+}
+.card-img{
+object-fit: cover;
+width: 100%;
+height: 200px;
+border-radius: 10px;
+}
+.main{
+padding-top: 100px;
+}
+.name{
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+.status{
+    padding: 0px;
+    margin: 0px;
+}
+.gender{
+    padding: 0px;
+    margin: 0px;
+}
+.card-content{
+    padding: 10px;
+}
+.card-bottom{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+}
