@@ -45,6 +45,24 @@ promise.then((data) => {
       cardName.innerHTML = `${item.name}`;
       contentDiv.appendChild(cardName);
 
+      document
+        .querySelector(".input-search")
+        .addEventListener("input", filterList);
+
+      function filterList() {
+        const searchInput = document.querySelector(".input-search");
+        const filter = searchInput.value.toLowerCase();
+        const listItem = document.querySelectorAll(".card");
+
+        listItem.forEach((item) => {
+          let cards = item.textContent;
+          if (cards.toLowerCase().includes(filter.toLowerCase())) {
+            item.style.display = "";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
       // const episodeCard = document.createElement("button");
       // episodeCard.innerHTML = `${item.episode}`;
       // episodeCard.onclick((episode) => {
@@ -65,5 +83,27 @@ promise.then((data) => {
       genderCard.classList = "gender";
       genderCard.innerHTML = `${item.gender}`;
       bottomDiv.appendChild(genderCard);
+
+      // const searchButton = document.querySelector(".search-btn");
+      // searchButton.addEventListener("click", searchCards());
+
+      // let valueinput;
+      // const onSearchChange = (e) => {
+      //   valueinput = e.target.value;
+      // };
+      // function SearchCard() {
+      //   item.filter((item) => (onSearchChange = item.name));
+      // }
+      // SearchCard();
     });
 });
+// function searchCards(){
+
+// }
+// let valueinput;
+// const onSearchChange = (e) => {
+//   valueinput = e.target.value;
+// };
+// function SearchCard() {
+
+// }
